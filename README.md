@@ -1,2 +1,5 @@
 # supertest
-Supertest Automation Example for Reqres.in website
+Supertest javascript API Automation Example for Reqres.in website
+
+# Installation 
+`npm install supertest`
