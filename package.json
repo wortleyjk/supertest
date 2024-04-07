@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "node-fetch": "^2.7.0",
+    "supertest": "^6.3.4"
+  },
+  "main": "TestRunner.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  }
+}
