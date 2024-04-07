@@ -8,6 +8,6 @@
   "main": "TestRunner.js",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/PZeroTests.js test/POneTests.js"
   }
 }

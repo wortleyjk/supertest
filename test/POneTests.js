@@ -2,14 +2,14 @@ import request from "supertest";
 import { expect } from "chai";
 const baseUrl = "www.reqres.com";
 
-
-describe("P0 Test Cases for API Automation", () => {
-    it('Gets base URL and respond with 200 OK status', (done) => {
+describe("P1 Test Cases for API Automation",(done)=>{
+    it('Should give a 404 not found error for /nothing',(done)=>{
         request(baseUrl)
-        .get('/')
+        .get("/nothing")
         .end(function(err,res){
-            expect(res.statusCode).to.be.equal(200);
+            expect(res.statusCode).to.be.equal(404);
             done();
         });
     });
+
 });
