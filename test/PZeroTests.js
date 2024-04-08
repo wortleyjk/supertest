@@ -1,6 +1,6 @@
 import request from "supertest";
 import { expect } from "chai";
-const baseUrl = "www.reqres.com";
+const baseUrl = "https://reqres.in";
 
 
 describe("P0 Test Cases for API Automation", () => {
