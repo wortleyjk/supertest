@@ -25,7 +25,7 @@ describe("P0 Test Cases for API Automation", () => {
             done();
         });
     });
-    it.only("[Test-005] Should return a single color resource",(done)=>{
+    it("[Test-005] Should return a single color resource",(done)=>{
         request(baseUrl)
         .get("/api/unknown/2")
         .end(function(err, res){
