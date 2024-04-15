@@ -4,7 +4,7 @@ import { expect } from "chai";
 const baseUrl = "https://reqres.in";
 
 describe("P0 Test Cases for API Automation", () => {
-    it('Gets base URL and respond with 200 OK status', (done) => {
+    it("[Test-001]Gets base URL and respond with 200 OK status", (done) => {
         request(baseUrl)
         .get('/')
         .end(function(err,res){
@@ -12,7 +12,7 @@ describe("P0 Test Cases for API Automation", () => {
             done();
         });
     });
-    it('Checks that the response is in JSON format and matching specific user data', (done)=> {
+    it("[Test-002]Checks that the response is in JSON format and matching specific user data", (done)=> {
         request(baseUrl)
         .get('/api/users/2')
         .end(function(err,res){
