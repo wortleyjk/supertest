@@ -1,5 +1,8 @@
-# supertest
+# API testing using Supertest package
 Supertest javascript API Automation Example for Reqres.in website
 
-# Installation 
-`npm install supertest`
+# Pre-requisites
+- Node.js is installed
+
+# Usage 
+- Naviage to your working directory and run ``npm test```
