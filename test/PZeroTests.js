@@ -1,6 +1,5 @@
 import request from "supertest";
 import { expect } from "chai";
-import { userData } from "../TestData.js";
 
 const baseUrl = "https://reqres.in";
 
@@ -17,6 +16,7 @@ describe("P0 Test Cases for API Automation", () => {
         request(baseUrl)
         .get('/api/users/2')
         .end(function(err,res){
+            expect(res.statusCode).to.be.equal(200);
             expect('Content-Type', /json/)
             expect(res.body.data.id).to.be.equal(2);
             expect(res.body.data.email).to.be.equal('janet.weaver@reqres.in');
