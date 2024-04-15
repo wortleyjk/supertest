@@ -34,6 +34,15 @@ describe("P0 Test Cases for API Automation", () => {
             const filteredResponseKey = Object.keys(res.body.data).filter( key => key.includes("id")); 
             expect(filteredResponseKey.length).to.be.equal(1);
             done();
-        })
-    })
+        });
+    });
+    it("[Test-006] Should return 6 entries of color resources", (done) => {
+        request(baseUrl)
+        .get('/api/unknown')
+        .end(function(err,res){
+            expect(res.statusCode).to.be.equal(200);
+            expect(res.body.data.length).to.be.equal(6);
+            done();
+        });
+    });
 });
