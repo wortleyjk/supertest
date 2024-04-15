@@ -5,4 +5,4 @@ Supertest javascript API Automation Example for Reqres.in website
 - Node.js is installed
 
 # Usage 
-- Naviage to your working directory and run ``npm test```
+- Naviage to your working directory and run ``npm test``
