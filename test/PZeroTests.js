@@ -17,7 +17,7 @@ describe("P0 Test Cases for API Automation", () => {
         .get('/api/users/2')
         .end(function(err,res){
             expect(res.statusCode).to.be.equal(200);
-            expect('Content-Type', /json/)
+            expect('Content-Type', /json/);
             expect(res.body.data.id).to.be.equal(2);
             expect(res.body.data.email).to.be.equal('janet.weaver@reqres.in');
             expect(res.body.data.first_name).to.be.equal('Janet');
@@ -25,4 +25,15 @@ describe("P0 Test Cases for API Automation", () => {
             done();
         });
     });
+    it.only("[Test-005] Should return a single color resource",(done)=>{
+        request(baseUrl)
+        .get("/api/unknown/2")
+        .end(function(err, res){
+            expect(res.statusCode).to.be.equal(200);
+            // check that there is only 1 "id" returned
+            const filteredResponseKey = Object.keys(res.body.data).filter( key => key.includes("id")); 
+            expect(filteredResponseKey.length).to.be.equal(1);
+            done();
+        })
+    })
 });
